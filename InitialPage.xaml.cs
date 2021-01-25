@@ -24,30 +24,28 @@ namespace systema
     /// </summary>
     public partial class InitialPage : Window
     {
+        Funcoes Funcoes = new Funcoes();
+        Users users = new Users();
+        
 
-        Funcoes f = new Funcoes();
+        // Função para validar campos;
+        public void Validacao()
+        {
+
+            
+
+        }
 
         public InitialPage()
         {
+            
             InitializeComponent();
-
-          
+            Validacao();
         }
 
         private void Logar_Click(object sender, RoutedEventArgs e)
         {
-            Users users = new Users() { Username = "TAtu anta" };
-            Users us = new Users() { Username = "Arara" };
-
-           
-            if (string.IsNullOrEmpty(Usuario_txtbox.Text))
-            {
-                Label1.DataContext = users;
-            }
-            if (string.IsNullOrEmpty(Senha_pwdbox.Password))
-            {
-                Label1.DataContext = us;
-            }
+            
             
 
 
@@ -72,18 +70,6 @@ namespace systema
         {
             
         }
-
-        //string password = Senha_pwdbox.Password;
-
-        /*public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName] string PropertyName = null)  
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs[PropertyName]);
-        } */
-
-
-
-        // Classe que fará integração com o Binding XAML
 
 
     }

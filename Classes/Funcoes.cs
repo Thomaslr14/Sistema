@@ -7,10 +7,13 @@ using System.Windows.Controls;
 using System.Windows;
 using systema.BancoDeDados;
 
+
 namespace systema.Classes
 {
-    class Funcoes
+    class Funcoes 
     {
+        
+
         public void LimparCampos(TextBox textbox)
         {
             textbox.Text = "";

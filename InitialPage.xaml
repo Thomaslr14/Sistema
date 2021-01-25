@@ -9,6 +9,10 @@
         Title="SysStema" Height="500" Width="900"
         WindowStyle="SingleBorderWindow" 
         WindowStartupLocation="CenterScreen" Loaded="WindowLoaded"  >
+    <Window.Resources>
+        <classes:Users x:Key="MyDataSource"/>
+        
+    </Window.Resources>
     <Grid>
         <Image HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="751" Source="C:\DEVELOPMENT\Projetos Git\systema\images\powershell_transparent2.jpg" >
             <Image.RenderTransform>
@@ -22,14 +26,15 @@
         </Image>
         <Label Content="Bem Vindo!" HorizontalAlignment="Left" Margin="741,50,0,0" VerticalAlignment="Top" Height="34" Width="109" FontSize="18" FontWeight="Bold"/>
         <Label Content="Usuário:" HorizontalAlignment="Left" Margin="683,168,0,0" VerticalAlignment="Top"/>
-        <Label Content="Senha:" HorizontalAlignment="Left" Margin="688,202,0,0" VerticalAlignment="Top" Width="48"/>
-        <TextBox Name="Usuario_txtbox" HorizontalAlignment="Left" Height="23" Margin="741,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"/>
+        <Label Content="Senha:" HorizontalAlignment="Left" Margin="688,219,0,0" VerticalAlignment="Top" Width="48"/>
+        <TextBox Name="Usuario_txtbox" Text="{Binding Source={StaticResource MyDataSource}, Path=Username}" HorizontalAlignment="Left" Height="23" Margin="741,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"/>
 
-        <Label Name="Label1" Content="{Binding Path=Username}" Foreground="Red" HorizontalAlignment="Left" Margin="620,202,0,0" VerticalAlignment="Top" Width="55"/>
+        <Label Name="Label1" Content="{Binding Source={StaticResource MyDataSource}, Path=Username}" Foreground="Red" HorizontalAlignment="Left" Margin="688,191,0,0" VerticalAlignment="Top" Width="165" Height="23"/>
+        <Label x:Name="Label2" Content="Tatu" Foreground="Red" HorizontalAlignment="Left" Margin="688,242,0,0" VerticalAlignment="Top" Width="165" Height="23"/>
+
+        <PasswordBox Name="Senha_pwdbox" HorizontalAlignment="Left" Height="23" Margin="741,219,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button Name="LogarButton" Content="Login" HorizontalAlignment="Left" IsEnabled="{Binding Source={StaticResource MyDataSource}, Path=Button, Mode=TwoWay}" Margin="806,270,0,0" VerticalAlignment="Top" Width="47" Click="Logar_Click"/>
         
-        
-        <PasswordBox Name="Senha_pwdbox" HorizontalAlignment="Left" Height="23" Margin="741,202,0,0" VerticalAlignment="Top" Width="112"/>
-        <Button Name="Logar" Content="Login" HorizontalAlignment="Left" Margin="806,246,0,0" VerticalAlignment="Top" Width="47" Click="Logar_Click"/>
 
     </Grid>
 </Window>
