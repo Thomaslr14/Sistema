@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using systema.BancoDeDados;
 using systema.Classes;
@@ -25,26 +22,16 @@ namespace systema
     public partial class InitialPage : Window
     {
         Funcoes Funcoes = new Funcoes();
-        Users users = new Users();
-        
-
-        // Função para validar campos;
-        public void Validacao()
-        {
-
-            
-
-        }
 
         public InitialPage()
         {
-            
-            InitializeComponent();
-            Validacao();
+
         }
 
         private void Logar_Click(object sender, RoutedEventArgs e)
         {
+            // trecho que o codigo vai executar
+
             
             
 
@@ -68,7 +55,7 @@ namespace systema
 
         private void WindowLoaded(object sender, RoutedEventArgs e)
         {
-            
+            InitializeComponent();
         }
 
 

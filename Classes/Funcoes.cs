@@ -13,7 +13,6 @@ namespace systema.Classes
     class Funcoes 
     {
         
-
         public void LimparCampos(TextBox textbox)
         {
             textbox.Text = "";

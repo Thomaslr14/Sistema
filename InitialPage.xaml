@@ -27,13 +27,13 @@
         <Label Content="Bem Vindo!" HorizontalAlignment="Left" Margin="741,50,0,0" VerticalAlignment="Top" Height="34" Width="109" FontSize="18" FontWeight="Bold"/>
         <Label Content="Usuário:" HorizontalAlignment="Left" Margin="683,168,0,0" VerticalAlignment="Top"/>
         <Label Content="Senha:" HorizontalAlignment="Left" Margin="688,219,0,0" VerticalAlignment="Top" Width="48"/>
-        <TextBox Name="Usuario_txtbox" Text="{Binding Source={StaticResource MyDataSource}, Path=Username}" HorizontalAlignment="Left" Height="23" Margin="741,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"/>
+        <TextBox Name="Usuario_txtbox" Text="{Binding Source={StaticResource MyDataSource}, Path=Username, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="741,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"/>
 
         <Label Name="Label1" Content="{Binding Source={StaticResource MyDataSource}, Path=Username}" Foreground="Red" HorizontalAlignment="Left" Margin="688,191,0,0" VerticalAlignment="Top" Width="165" Height="23"/>
         <Label x:Name="Label2" Content="Tatu" Foreground="Red" HorizontalAlignment="Left" Margin="688,242,0,0" VerticalAlignment="Top" Width="165" Height="23"/>
 
         <PasswordBox Name="Senha_pwdbox" HorizontalAlignment="Left" Height="23" Margin="741,219,0,0" VerticalAlignment="Top" Width="112"/>
-        <Button Name="LogarButton" Content="Login" HorizontalAlignment="Left" IsEnabled="{Binding Source={StaticResource MyDataSource}, Path=Button, Mode=TwoWay}" Margin="806,270,0,0" VerticalAlignment="Top" Width="47" Click="Logar_Click"/>
+        <Button Name="LogarButton" Content="Login" HorizontalAlignment="Left" IsEnabled="{Binding Source={StaticResource MyDataSource}, Path=Button, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="806,270,0,0" VerticalAlignment="Top" Width="47" Click="Logar_Click"/>
         
 
     </Grid>

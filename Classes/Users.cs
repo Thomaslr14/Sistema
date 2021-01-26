@@ -10,26 +10,33 @@ namespace systema.Classes
 {
     public class Users : INotifyPropertyChanged
     {
-        
-
-        Funcoes Funcoes = new Funcoes();
-
-        
         private string _Username { get; set; }
         public string Username 
         { 
             get { return _Username; }
             set
             {
-                // Se o Username estiver preenchido ele recebe um valor true
+
+
+                // Se o Username estiver preenchido o Button recebe um valor true
                 if (!string.IsNullOrWhiteSpace(value))
+                {
+                     _Username = value;
+                     NotifyPropertyChanged("_Username");
+                    
+                     Button = true;
+                     NotifyPropertyChanged("Button");
+
+                }
+                // Se o Username NÃO estiver preenchido o Button recebe um valor false
+                else
                 {
                     _Username = value;
                     NotifyPropertyChanged("_Username");
-                }
 
-                // Se o Username NÃO estiver preenchido ele recebe um valor false
-                
+                    Button = false;
+                    NotifyPropertyChanged("Button");
+                }
             }
         }
 
@@ -37,16 +44,13 @@ namespace systema.Classes
 
         private bool _Button { get; set; }
 
-        private bool Button
+        public bool Button
         {
             get { return _Button; }
-            set 
-            { 
-                if (Username != null)
-                {
-                    _Button = false ;
-                }
-                
+            set
+            {
+                _Button = value;
+                NotifyPropertyChanged("_Button");
             }
         }
 
@@ -56,10 +60,7 @@ namespace systema.Classes
 
         private void NotifyPropertyChanged([CallerMemberName] string propertyname = "")
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
 
 
