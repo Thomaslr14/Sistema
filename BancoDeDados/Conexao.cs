@@ -16,8 +16,9 @@ namespace systema.BancoDeDados
         { }
 
         // Tabelas que serão criadas no Banco
+        
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Senha> Senhas { get; set; }
+       
     }
 }
         

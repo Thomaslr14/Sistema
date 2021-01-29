@@ -75,9 +75,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BancoDeDados\Conexao.cs" />
-    <Compile Include="BancoDeDados\Senha.cs" />
     <Compile Include="BancoDeDados\Usuario.cs" />
     <Compile Include="Classes\Funcoes.cs" />
+    <Compile Include="Classes\Hash.cs" />
+    <Compile Include="Classes\Salt.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="InitialPage.xaml.cs">
       <DependentUpon>InitialPage.xaml</DependentUpon>

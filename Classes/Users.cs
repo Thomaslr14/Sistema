@@ -16,24 +16,21 @@ namespace systema.Classes
             get { return _Username; }
             set
             {
-
-
                 // Se o Username estiver preenchido o Button recebe um valor true
                 if (!string.IsNullOrWhiteSpace(value))
                 {
                      _Username = value;
                      NotifyPropertyChanged("_Username");
-                    
+                   
                      Button = true;
-                     NotifyPropertyChanged("Button");
-
+                     NotifyPropertyChanged("Button"); 
                 }
                 // Se o Username NÃO estiver preenchido o Button recebe um valor false
                 else
                 {
                     _Username = value;
                     NotifyPropertyChanged("_Username");
-
+                    
                     Button = false;
                     NotifyPropertyChanged("Button");
                 }
@@ -63,7 +60,7 @@ namespace systema.Classes
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
 
-
+        
 
     }
 }

@@ -30,12 +30,13 @@ namespace systema
 
         private void Logar_Click(object sender, RoutedEventArgs e)
         {
-            // trecho que o codigo vai executar
+            //Salt.GetSalt();
+            var hash = Hash.GenerateHash(Senha_pwdbox.Password);
+            Hash.Enconding(hash);
+            Funcoes.ValidarConexaoBD(Usuario_txtbox.Text);
 
+           // Funcoes.IniciarConexaoBD(users.Username);
             
-            
-
-
 
             /* using (var bd = new ConexaoContext())
             {
@@ -47,15 +48,13 @@ namespace systema
 
 
             } */
-            //Funcoes f = new Funcoes();
-            //f.ValidarLogin(Convert.ToString(Usuario_txtbox.Text), Senha_pwdbox.Password);
-
 
         }
 
         private void WindowLoaded(object sender, RoutedEventArgs e)
         {
             InitializeComponent();
+            
         }
 
 

@@ -29,7 +29,7 @@
         <Label Content="Senha:" HorizontalAlignment="Left" Margin="688,219,0,0" VerticalAlignment="Top" Width="48"/>
         <TextBox Name="Usuario_txtbox" Text="{Binding Source={StaticResource MyDataSource}, Path=Username, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="741,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"/>
 
-        <Label Name="Label1" Content="{Binding Source={StaticResource MyDataSource}, Path=Username}" Foreground="Red" HorizontalAlignment="Left" Margin="688,191,0,0" VerticalAlignment="Top" Width="165" Height="23"/>
+        <Label Name="Label1" Content="{Binding Source={StaticResource MyDataSource}, Path=Username, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Foreground="Red" HorizontalAlignment="Left" Margin="688,191,0,0" VerticalAlignment="Top" Width="165" Height="23"/>
         <Label x:Name="Label2" Content="Tatu" Foreground="Red" HorizontalAlignment="Left" Margin="688,242,0,0" VerticalAlignment="Top" Width="165" Height="23"/>
 
         <PasswordBox Name="Senha_pwdbox" HorizontalAlignment="Left" Height="23" Margin="741,219,0,0" VerticalAlignment="Top" Width="112"/>
